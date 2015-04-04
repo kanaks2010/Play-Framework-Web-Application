@@ -4,6 +4,8 @@
 
 # Home page
 GET     /                           controllers.Application.index()
+POST     /createprofile             controllers.Application.crprofile()
+GET     /createprofile             controllers.Application.crprofile()
 GET     /patientprofile             controllers.Application.pprofile()
 GET     /doctorprofile         	    controllers.Application.dprofile()
 GET     /index             			controllers.Application.main()

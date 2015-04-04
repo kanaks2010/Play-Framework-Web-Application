@@ -1,0 +1,420 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Profile of Patient</title>
+		
+		<link rel="stylesheet"  media="screen" href="@routes.Assets.at("stylesheets/odplanet.landing.css")" />
+		<link rel="stylesheet"  media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")" />
+		<link rel="stylesheet"  media="screen" href="@routes.Assets.at("stylesheets/bootstrap.min.css")" />
+		<link rel="stylesheet"  media="screen" href="@routes.Assets.at("stylesheets/bootstrap-social.css")" />
+		<link rel="stylesheet"  media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")" />
+		<link rel="stylesheet"  media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")" />
+		<script src="javascripts/jquery.min.js" type="text/javascript"></script>
+		<script src="javascripts/jquery.min.js" type="text/javascript"></script>
+		<script src="javascripts/bootstrap.min.js" type="text/javascript"></script>
+		<link rel="stylesheet"  media="screen" href="@routes.Assets.at("stylesheets/odplanet.profile.css")" />
+		<script type="text/javascript">
+function setOptions(chosen, selbox) {
+
+selbox.options.length = 0;
+if (chosen == " ") {
+selbox.options[selbox.options.length] = new Option('Please select one of the options above first',' ');
+setTimeout(setOptions(' ',document.myform.optthree),5);
+}
+if (chosen == "Bangladesh") {
+selbox.options[selbox.options.length] = new Option('Select your division','11');
+selbox.options[selbox.options.length] = new Option('Dhaka','Dhaka');
+selbox.options[selbox.options.length] = new Option('Khulna','Khulna');
+selbox.options[selbox.options.length] = new Option('Borishal','Borishal');
+selbox.options[selbox.options.length] = new Option('Rajshahi','Rajshahi');
+selbox.options[selbox.options.length] = new Option('Rangpur','Rangpur');
+selbox.options[selbox.options.length] = new Option('Sylhet','Sylhet');
+selbox.options[selbox.options.length] = new Option('Chittagong','Chittagong');
+setTimeout(setOptions('11',document.myform.optthree),5);
+ }
+if (chosen == "2") {
+selbox.options[selbox.options.length] = new Option('--Select--','21');
+selbox.options[selbox.options.length] = new Option('District','22');
+selbox.options[selbox.options.length] = new Option('Taluk','23');
+selbox.options[selbox.options.length] = new Option('Hobli','24');
+selbox.options[selbox.options.length] = new Option('Village','25');
+setTimeout(setOptions('21',document.myform.optthree),5);
+}
+if (chosen == "11") {
+selbox.options[selbox.options.length] = new Option('Please select one of the options above first',' ');
+ }
+if (chosen == "Dhaka") {
+selbox.options[selbox.options.length] = new Option('--All Zones--',' ');
+selbox.options[selbox.options.length] = new Option('Dhaka','Dhaka');
+selbox.options[selbox.options.length] = new Option('Faridpur','Faridpur');
+selbox.options[selbox.options.length] = new Option('Gajipur','Gajipur');
+selbox.options[selbox.options.length] = new Option('Gopalgonj','Gopalgonj');
+selbox.options[selbox.options.length] = new Option('Jamalpur','Jamalpur');
+selbox.options[selbox.options.length] = new Option('Kishoregonj','Kishoregonj');
+selbox.options[selbox.options.length] = new Option('Madaripur','Madaripur');
+selbox.options[selbox.options.length] = new Option('Manikgonj','Manikgonj');
+selbox.options[selbox.options.length] = new Option('Munshigonj','Munshigonj');
+selbox.options[selbox.options.length] = new Option('Mymensingh','Mymensingh');
+selbox.options[selbox.options.length] = new Option('Narayanganj','Narayanganj');
+selbox.options[selbox.options.length] = new Option('Narsingdi','Narsingdi');
+selbox.options[selbox.options.length] = new Option('Netrakona','Netrakona');
+selbox.options[selbox.options.length] = new Option('Rajbari','Rajbari');
+selbox.options[selbox.options.length] = new Option('Shariatpur','Shariatpur');
+selbox.options[selbox.options.length] = new Option('Sherpur','Sherpur');
+selbox.options[selbox.options.length] = new Option('Tangail','Tangail');
+}
+if (chosen == "Khulna") {
+selbox.options[selbox.options.length] = new Option('--All Districts--',' ');
+selbox.options[selbox.options.length] = new Option('Bagerhat','Bagerhat');
+selbox.options[selbox.options.length] = new Option('Chuadanga','Chuadanga');
+selbox.options[selbox.options.length] = new Option('Jessore','Jessore');
+selbox.options[selbox.options.length] = new Option('Khulna','Khulna');
+selbox.options[selbox.options.length] = new Option('Kushtia','Kushtia');
+selbox.options[selbox.options.length] = new Option('Jhenaidah','Jhenaidah');
+selbox.options[selbox.options.length] = new Option('Magura','Magura');
+selbox.options[selbox.options.length] = new Option('Meherpur ','Meherpur ');
+selbox.options[selbox.options.length] = new Option('Narail ','Narail ');
+selbox.options[selbox.options.length] = new Option('Satkhira ','Satkhira ');
+  } 
+if (chosen == "Borishal") {
+selbox.options[selbox.options.length] = new Option('--All Districts--',' ');
+selbox.options[selbox.options.length] = new Option('Barguna','Barguna');
+selbox.options[selbox.options.length] = new Option('Barisal','Barisal');
+selbox.options[selbox.options.length] = new Option('Bhola','Bhola');
+selbox.options[selbox.options.length] = new Option('Jhalokati','Jhalokati');
+selbox.options[selbox.options.length] = new Option('Patuakhali ','Patuakhali ');
+selbox.options[selbox.options.length] = new Option('Pirojpur ','Pirojpur ');
+}
+if (chosen == "Rajshahi") {
+selbox.options[selbox.options.length] = new Option('--All Districts--',' ');
+selbox.options[selbox.options.length] = new Option('Bogra','Bogra');
+selbox.options[selbox.options.length] = new Option('Joypurhat','Joypurhat');
+selbox.options[selbox.options.length] = new Option('Naogaon','Naogaon');
+selbox.options[selbox.options.length] = new Option('Natore','Natore');
+selbox.options[selbox.options.length] = new Option('Chapainawabganj ','Chapainawabganj ');
+selbox.options[selbox.options.length] = new Option('Pabna','Pabna');
+selbox.options[selbox.options.length] = new Option('Rajshahi','Rajshahi');
+selbox.options[selbox.options.length] = new Option('Sirajganj ','Sirajganj ');
+}
+if (chosen == "Rangpur") {
+selbox.options[selbox.options.length] = new Option('--All Districts--',' ');
+selbox.options[selbox.options.length] = new Option('Dinajpur','Dinajpur');
+selbox.options[selbox.options.length] = new Option('Gaibandha','Gaibandha');
+selbox.options[selbox.options.length] = new Option('Kurigram','Kurigram');
+selbox.options[selbox.options.length] = new Option('Lalmonirhat ','Lalmonirhat ');
+selbox.options[selbox.options.length] = new Option('Nilphamari','Nilphamari');
+selbox.options[selbox.options.length] = new Option('Panchagarh ','Panchagarh ');
+selbox.options[selbox.options.length] = new Option('Rangpur ','Rangpur ');
+selbox.options[selbox.options.length] = new Option('Thakurgaon','Thakurgaon');
+selbox.options[selbox.options.length] = new Option('Sirajganj ','Sirajganj ');
+
+}
+
+if (chosen == "Sylhet") {
+	selbox.options[selbox.options.length] = new Option('--All Districts--',' ');
+	selbox.options[selbox.options.length] = new Option('Habiganj','Habiganj');
+	selbox.options[selbox.options.length] = new Option('Moulvibazar','Moulvibazar');
+	selbox.options[selbox.options.length] = new Option('Sunamganj','Sunamganj');
+	selbox.options[selbox.options.length] = new Option('Sylhet ','Sylhet ');
+	}
+	
+if (chosen == "Chittagong") {
+	selbox.options[selbox.options.length] = new Option('--All Districts--',' ');
+	selbox.options[selbox.options.length] = new Option('Bandarban','Bandarban');
+	selbox.options[selbox.options.length] = new Option('Brahmanbaria','Brahmanbaria');
+	selbox.options[selbox.options.length] = new Option('Chandpur','Chandpur');
+	selbox.options[selbox.options.length] = new Option('Chittagong  ','Chittagong  ');
+	
+	selbox.options[selbox.options.length] = new Option('Comilla','Comilla');
+	selbox.options[selbox.options.length] = new Option('Coxs Bazar','Coxs Bazar');
+	selbox.options[selbox.options.length] = new Option('Feni','Feni');
+	selbox.options[selbox.options.length] = new Option('Khagrachhari  ','Khagrachhari  ');
+	selbox.options[selbox.options.length] = new Option('Lakshmipur','Lakshmipur');
+	selbox.options[selbox.options.length] = new Option('Noakhali','Noakhali');
+	}
+
+
+
+
+
+ if (chosen == "21") {
+selbox.options[selbox.options.length] = new Option('Please select one of the options above first',' ');
+ }
+ if (chosen == "22") {
+selbox.options[selbox.options.length] = new Option('--All Districts--',' ');
+selbox.options[selbox.options.length] = new Option('District 1','District 1');
+ }
+if (chosen == "23") {
+selbox.options[selbox.options.length] = new Option('--All Taluks--',' ');
+selbox.options[selbox.options.length] = new Option('Taluk 1','Taluk 1');
+ }
+if (chosen == "24") {
+selbox.options[selbox.options.length] = new Option('--All Hoblis--',' ');
+selbox.options[selbox.options.length] = new Option('Hobli 1','Hobli 1');
+ }
+if (chosen == "25") {
+selbox.options[selbox.options.length] = new Option('--All Villages--',' ');
+selbox.options[selbox.options.length] = new Option('Village 1','Village 1');
+}
+ }
+ </script>
+		</head>
+	<body>
+	
+		<div class="container-fluid nav-min-height no-margin no-padding">
+			<div class="container nav-min-height">
+				<div class="row no-margin no-padding">
+					<div class="col-md-4">
+						<img style="height:7%; width:10%;" src="@routes.Assets.at("images/logo.png")"/>
+						
+					</div>
+					<div class="col-md-4 pull-middle form">
+						<form class="" role="search">
+							<div class="input-group add-on">
+								<input class="form-control " placeholder="Search" name="srch-term" id="srch-term" type="text" style="width:100%;">
+									<div class="input-group-btn">
+											<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+									</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-4 pull-right img-responsive header-img ">
+						<img class="pull-right" style="height:7%; width:10%;"src="@routes.Assets.at("images/message.png")"></img>
+						<img class="pull-right" style="height:7%; width:10%;"src="@routes.Assets.at("images/flag.png")"></img>
+						<img class="pull-right" style="height:7%; width:10%;"src="@routes.Assets.at("images/user.png")"></img>
+						<img class="pull-right" style="height:7%; width:10%;"src="@routes.Assets.at("images/doctor.jpg")"></img>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default" style="background:#2A2A2A;border-radius: 0px; border-color:#2A2A2A; margin:0px;" >
+  <div style="background:#2A2A2A;" class="container ">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Profile <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Connections</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Interest</a></li>
+      </ul>
+			<ul class="nav navbar-nav pull-right">
+        <li><a href="#">Business Services<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Try premium for free</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->    
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid  header-public">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 view">
+					<p class="pull-left">
+						This is what your profile looks like &nbsp;&nbsp;
+						<select>
+							<option>Public</option>
+							<option>Private</option>
+						</select>
+					</p>
+			</div>
+			<div class="col-md-6 col-xs-12 view">
+			<p class="pull-right">
+				<button type="button" class="btn btn-default btn-xs">Return to your Profile</button>
+				</p>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+	<div class="col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
+		<div style="padding-top:6%;" class="col-lg-11">
+			<h5 >Shekhar Abdullah, Let's Start creating your professional doctor profile</h5>
+			<hr>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<div style="margin-bottom:15%;" class="container">
+	<div class="row">
+	<div class="col-lg-1 col-md-12 col-sm-12 col-xs-12"></div>
+		<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 create_profile1">
+				<form class="form-horizontal" name="myform">
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Country</label>
+						<div class="col-sm-10">
+							 <select name="optone" class="form-control input-sm" required="rerquired"onchange="setOptions(document.myform.optone.options[document.myform.optone.selectedIndex].value,document.myform.opttwo);">
+							 <option value="" >Select Your Country</option>
+								<option value="Bangladesh">Bangladesh</option>
+								<!--<option value="India">India</option>
+								<option value="Nepal">Nepal</option>
+								<option value="Bhutan">Bhutan</option>
+								<option value="Srilanka">Srilanka</option>
+								<option value="Maldip">Maldip</option>
+								<option value="Pakistan">Pakistan</option>
+								<option value="Chin">Chin</option>
+								<option value="United Arab Emirates">United Arab Emirates</option>
+								<option value="United Soudi Arabia">United Soudi Arabia</option>
+								<option value="United State">United State</option>
+								<option value="United Kingdom">United Kingdom</option>
+								<option value="Colombia">Colombia</option>
+								<option value="Afganistan">Afganistan</option>
+								<option value="Kazakistan">Kazakistan</option>
+								<option value="Turkistan">Turkistan</option>
+								<option value="Italy">Italy</option>
+								<option value="Australia">Australia</option>
+								<option value="Austria">Austria</option>-->
+							
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Division</label>
+						<div class="col-sm-10">
+							<select name="opttwo" onchange="setOptions(document.myform.opttwo.options[document.myform.opttwo.selectedIndex].value,document.myform.optthree);" class="form-control input-sm" required="rerquired">
+							 <option value="" selected="selected">Select Your Division</option>
+								<!--<option value="Dhaka">Dhaka</option>
+								<option value="Khulna">Khulna</option>
+								<option value="Borishal">Borishal</option>
+								<option value="Rangpur">Rangpur</option>
+								<option value="Rajshahi">Rajshahi</option>
+								<option value="Sylhet">Sylhet</option>
+								<option value="Chittagong">Chittagong</option>-->
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">District</label>
+						<div class="col-sm-10">
+							<select name="optthree" class="form-control input-sm" required="rerquired">
+							 <option value="" selected="selected">Select Your District</option>
+								<!--<option value="Dhaka">Dhaka</option>
+								<option value="BARGUNA">BARGUNA</option>
+								<option value="BARISAL">BARISAL</option>
+								<option value="BHOLA">BHOLA</option>
+								<option value="JHALOKATI">JHALOKATI</option>
+								<option value="PATUAKHALI">PATUAKHALI</option>
+								<option value="PIROJPUR">PIROJPUR</option>
+								<option value="BAGERHAT">BAGERHAT</option>
+								<option value="CHUADANGA">CHUADANGA</option>
+								<option value="JESSORE">JESSORE</option>
+								<option value="JHENAIDAH">JHENAIDAH</option>
+								<option value="KHULNA">KHULNA</option>
+								<option value="KUSHTIA">KUSHTIA</option>
+								<option value="MAGURA">MAGURA</option>
+								<option value="MEHERPUR">MEHERPUR</option>
+								<option value="NARAIL">NARAIL</option>
+								<option value="SATKHIRA">SATKHIRA</option>
+								<option value="BOGRA">BOGRA</option>
+								<option value="CHAPAINABABGANJ">CHAPAINABABGANJ</option>
+								<option value="JOYPURHAT">JOYPURHAT</option>
+								<option value="PABNA">PABNA</option>
+								<option value="NAOGAON">NAOGAON</option>
+								<option value="NATORE">NATORE</option>
+								<option value="RAJSHAHI">RAJSHAHI</option>
+								<option value="SIRAJGANJ">SIRAJGANJ</option>
+								<option value="DINAJPUR">DINAJPUR</option>
+								<option value="GAIBANDHA">GAIBANDHA</option>
+								<option value="KURIGRAM">KURIGRAM</option>
+								<option value="LALMONIRHAT">LALMONIRHAT</option>
+								<option value="NILPHAMARI">NILPHAMARI</option>
+								<option value="PANCHAGARH">PANCHAGARH</option>
+								<option value="RANGPUR">RANGPUR</option>
+								<option value="THAKURGAON">THAKURGAON</option>
+								<option value="HABIGANJ">HABIGANJ</option>
+								<option value="MAULVIBAZAR">MAULVIBAZAR</option>
+								<option value="SUNAMGANJ">SUNAMGANJ</option>
+								<option value="SYLHET">SYLHET</option>
+								<option value="BANDARBAN">BANDARBAN</option>
+								<option value="BRAHMANBARIA">BRAHMANBARIA</option>
+								<option value="CHANDPUR">CHANDPUR</option>
+								<option value="CHITTAGONG">CHITTAGONG</option>
+								<option value="COMILLA">COMILLA</option>
+								<option value="COX'S BAZAR">COX'S BAZAR</option>
+								<option value="FENI">FENI</option>
+								<option value="KHAGRACHHARI">KHAGRACHHARI</option>
+								<option value="LAKSHMIPUR">LAKSHMIPUR</option>
+								<option value="NOAKHALI">NOAKHALI</option>
+								<option value="RANGAMATI">RANGAMATI</option>
+								<option value="FARIDPUR">FARIDPUR</option>
+								<option value="GAZIPUR">GAZIPUR</option>
+								<option value="GOPALGANJ">GOPALGANJ</option>
+								<option value="JAMALPUR">JAMALPUR</option>
+								<option value="KISHOREGONJ">KISHOREGONJ</option>
+								<option value="MANIKGANJ">MANIKGANJ</option>
+								<option value="MUNSHIGANJ">MUNSHIGANJ</option>
+								<option value="MYMENSINGH">MYMENSINGH</option>
+								<option value="NARAYANGANJ">NARAYANGANJ</option>
+								<option value="NARSINGDI">NARSINGDI</option>
+								<option value="NETRAKONA">NETRAKONA</option>
+								<option value="RAJBARI">RAJBARI</option>
+								<option value="SHARIATPUR">SHARIATPUR</option>
+								<option value="SHERPUR">SHERPUR</option>
+								<option value="TANGAIL">TANGAIL</option>-->
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-group">
+					<label for="inputEmail3" class="col-sm-2 control-label">Specialization</label>
+						<div class="col-sm-10">
+							<input class="pull-right sp col-sm-12" type="text" name="specialization" placeholder=" Field of  Specialization" required="required"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<a href="#"><button type="submit" class="btn btn-default pull-right">Next</button></a>
+						</div>
+					</div>					
+					
+					
+				</form>
+		</div>
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12"></div>
+		<div style="border:1px solid #ddd; padding:1%;" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<p >A Doctors profile help you</p>
+			<p >A Showcase your skills and experience</p>
+			<p >Be found for a new opportunity</p>
+			<p >Stay in touch with providing service</p>
+			
+		</div>
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12"></div>
+	</div>
+</div>
+
+<!--End of right content -->
+
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<p> this is foootre</p>
+		</div>
+	</div>
+</div>	
+
+<script src="@routes.Assets.at("javascripts/jquery.js")"></script>
+    <script src="@routes.Assets.at("javascripts/bootstrap.min.js")"></script>
+	</body>
+
+</html>

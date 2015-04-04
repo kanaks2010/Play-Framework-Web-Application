@@ -1,0 +1,69 @@
+.no-padding{padding:0px;}
+.no-margin{margin:0px;}
+.nav-min-height{min-height:25px; background:#545454;}
+.header-img img{padding-right:10px; }
+.header-img img{padding-top:10px; }
+.header-img img{padding-bottom:10px; }
+.header-img img {margin:0% 2% 0% 2% ;}
+.form form{padding-top:6px;}
+
+.nav-height{height:25px; background:#2A2A2A;}
+.custom-menu ul{list-style:none;}
+.custom-menu ul li{display:inline; padding:10px;}
+.custom-menu ul li a{display:inline; padding-right:25px;color:#fff }
+.icon-bar{color: #fff;border-color: #fff;background-color:#fff;}
+.view p{padding-top:2%;}
+.view p button{margin-right:10%;}
+.view p select{color:#79B1C1;}
+.header-public{border-bottom:5px solid #449CCF; height:3%;}
+.header-public-text{padding-top:8px; background:#ddd;margin-left:0px;}
+.demo{padding:0px 25px 0px 25px; text-align:center;}
+.div-control{padding:5px;  background:#ddd; border:1px solid #fff;}
+.div-control img{padding:5px; text-align:center; width:100%; background:#fff;}
+.content{padding:2%;background:#ddd;}
+.profile-img {padding:1%;}
+.profile-img img{border:2px solid #ddd}
+.profile-conten-1 {margin-left:1%;padding:10px;}
+.profile-conten-1  h2{margin-top:1%;}
+.right-content input{width:35%;}
+.right-content button{width:25%; height:30px; padding:0px; margin:0px;}
+
+/* Starting of Create Profile 1 CSS*/
+.create_profile1{border:1px solid #ddd;padding:2%;}	
+.sp{padding:1%;width:80%;}
+/* Ending of Create Profile 1 CSS*/
+.search-p{padding:5px; margin:1%;}
+.search-2{border-bottom:1px solid #ddd; padding:5px; }
+.search-3{padding:5px;}
+.search-content-1{padding:2px;}
+.search-content-2{padding:2px;}
+.search-content-1 p{padding:2px; font-size:12px;}
+.search-content-2 p{padding:2px; font-size:12px; border:1px solid #ddd;}
+
+
+
+@media only screen and (min-width: 150px) and (max-width: 600px){
+	.full-width{
+		width:100%; 
+		padding:0 10px 0 10px;
+	
+	}
+.right-side-img img{width:100%;height:100%;}
+.custom-row{border-bottom:1px solid #ddd; padding:5px;}
+.sp{padding:1%;width:100%; border-radius:5px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
