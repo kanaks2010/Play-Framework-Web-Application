@@ -19,6 +19,7 @@ public class Application extends Controller {
     public static Result crprofile() {
 		return ok(createprofile2.render(""));
     }
+    
     public static Result main() {
         return ok(index.render("Your new application is ready.You can change your app within a minute"));
     }
